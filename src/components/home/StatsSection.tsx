@@ -1,5 +1,7 @@
+"use client";
+
 import { Users, FileText, Calendar, Briefcase, Trophy } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const stats = [
   { icon: Users, value: "560+", label: "Thành viên", color: "text-blue-600" },

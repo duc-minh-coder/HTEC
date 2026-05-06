@@ -1,11 +1,15 @@
-import { useParams, Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import { newsData } from "../constants/newsData";
 import { Calendar, User, ArrowLeft, Share2, Tag } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 
 export default function NewsDetailPage() {
-  const { id } = useParams();
+  const params = useParams<{ id?: string | string[] }>();
+  const id = Array.isArray(params?.id) ? params.id[0] : params?.id;
   const article = newsData.find((item) => item.id === id);
 
   if (!article) {
@@ -16,7 +20,7 @@ export default function NewsDetailPage() {
             Không tìm thấy bài viết
           </h2>
           <Link
-            to="/"
+            href="/"
             className="text-blue-600 hover:underline flex items-center justify-center gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -37,7 +41,7 @@ export default function NewsDetailPage() {
         {/* Breadcrumb & Navigation */}
         <div className="mb-8 flex items-center justify-between">
           <Link
-            to="/"
+            href="/"
             className="flex items-center gap-2 text-slate-500 hover:text-blue-600 font-medium transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -93,7 +97,7 @@ export default function NewsDetailPage() {
             Đăng ký trở thành một phần của HTEC ngay hôm nay.
           </p>
           <Link
-            to="/register"
+            href="/register"
             className="inline-block bg-white text-blue-600 px-8 py-4 rounded-2xl font-black hover:bg-blue-50 transition-all shadow-lg relative z-10"
           >
             Đăng ký tham gia

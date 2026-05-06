@@ -2,12 +2,12 @@ import { Mail, Facebook, Github, Linkedin, MapPin, Globe } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-slate-400 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="bg-blue-600 p-1.5 rounded-lg">
+    <footer className="bg-slate-900 text-slate-400 py-12 sm:py-16">
+      <div className="container-wide">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
+          <div className="col-span-1 xs:col-span-2 md:col-span-2">
+            <div className="flex items-center gap-2 mb-4 sm:mb-6">
+              <div className="bg-blue-600 p-1.5 rounded-lg flex-shrink-0">
                 <div className="w-5 h-5 bg-white rounded-sm" />
               </div>
               <span className="text-2xl font-bold text-white tracking-tight">

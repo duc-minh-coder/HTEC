@@ -1,5 +1,7 @@
+"use client";
+
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Calendar,
   User,
@@ -8,7 +10,7 @@ import {
   Tag as TagIcon,
 } from "lucide-react";
 import { newsData } from "../constants/newsData";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const categories = ["Tất cả", "Sự kiện", "Tin tức", "Workshop"];
 
@@ -26,8 +28,8 @@ export default function NewsPage() {
   });
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-slate-50 min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24">
+      <div className="container-wide">
         <header className="mb-16">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 italic leading-tight">
@@ -87,7 +89,7 @@ export default function NewsPage() {
                 className="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all h-full flex flex-col"
               >
                 <Link
-                  to={`/news/${item.id}`}
+                  href={`/news/${item.id}`}
                   className="block h-full flex flex-col"
                 >
                   <div className="relative h-64 overflow-hidden">

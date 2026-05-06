@@ -1,5 +1,7 @@
+"use client";
+
 import { CircleChevronLeft, CircleChevronRight, Award, Linkedin, Mail } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
 
 const staffCategories = {

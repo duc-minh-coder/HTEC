@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { Menu, X, Rocket } from "lucide-react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +20,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-2 group">
+            <Link href="/" className="flex items-center gap-2 group">
               <div className="bg-blue-600 p-2 rounded-lg group-hover:rotate-12 transition-transform">
                 <Rocket className="w-6 h-6 text-white" />
               </div>
@@ -40,7 +42,7 @@ export default function Navbar() {
               </a>
             ))}
             <Link
-              to="/register"
+              href="/register"
               className="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
             >
               Tham gia ngay
@@ -84,7 +86,7 @@ export default function Navbar() {
                 </a>
               ))}
               <Link
-                to="/register"
+                href="/register"
                 onClick={() => setIsOpen(false)}
                 className="block w-full text-center bg-blue-600 text-white px-3 py-4 rounded-xl font-semibold mt-4"
               >

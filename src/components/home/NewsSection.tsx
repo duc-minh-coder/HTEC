@@ -1,8 +1,10 @@
+"use client";
+
 import { Calendar, ArrowRight, ChevronRight, User } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { newsData } from "../../constants/newsData";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const categories = ["Tất cả", "Sự kiện", "Tin tức", "Workshop"];
 
@@ -72,7 +74,10 @@ export default function NewsSection() {
                 transition={{ delay: index * 0.1 }}
                 className="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] transition-all h-full flex flex-col"
               >
-                <Link to={`/news/${item.id}`} className="flex flex-col h-full">
+                <Link
+                  href={`/news/${item.id}`}
+                  className="flex flex-col h-full"
+                >
                   <div className="relative h-72 overflow-hidden">
                     <img
                       src={item.image}
@@ -125,7 +130,7 @@ export default function NewsSection() {
 
         <div className="mt-24 text-center">
           <Link
-            to="/news"
+            href="/news"
             className="px-12 py-5 bg-slate-900 text-white rounded-[2rem] font-black italic hover:bg-blue-600 transition-all inline-flex items-center gap-4 mx-auto group shadow-2xl shadow-slate-900/20"
           >
             Tất cả bài viết

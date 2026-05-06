@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Lightbulb,
   Code,
@@ -8,7 +10,7 @@ import {
   Briefcase,
   Trophy,
 } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const areas = [
   {
@@ -60,18 +62,21 @@ const activities = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-16 items-center mb-24">
+    <section
+      id="about"
+      className="py-16 sm:py-20 md:py-24 bg-white relative overflow-hidden"
+    >
+      <div className="container-wide">
+        <div className="flex flex-col lg:flex-row gap-12 sm:gap-16 items-center mb-16 sm:mb-20 md:mb-24">
           <div className="lg:w-1/2">
-            <div className="mb-8">
+            <div className="mb-6 sm:mb-8">
               <span className="text-blue-600 font-black uppercase tracking-[0.2em] text-xs underline decoration-blue-600 underline-offset-8">
                 VỀ CHÚNG TÔI
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 mt-8 mb-8 italic">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mt-6 sm:mt-8 mb-6 sm:mb-8 italic">
                 Giới thiệu về HTEC
               </h2>
-              <div className="space-y-6 text-lg text-slate-600 leading-relaxed italic">
+              <div className="space-y-4 sm:space-y-6 text-base sm:text-lg text-slate-600 leading-relaxed italic">
                 <p>
                   HTEC là câu lạc bộ học thuật trực thuộc Trường Đại học Mở Hà
                   Nội, nơi quy tụ những sinh viên đam mê công nghệ, khởi nghiệp
@@ -85,9 +90,9 @@ export default function AboutSection() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-8 py-8">
-              <div className="bg-slate-50 p-6 rounded-3xl border border-slate-100">
-                <span className="block text-4xl font-black text-blue-600 mb-1">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 py-6 sm:py-8">
+              <div className="bg-slate-50 p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-100">
+                <span className="block text-2xl sm:text-3xl md:text-4xl font-black text-blue-600 mb-1">
                   120+
                 </span>
                 <span className="text-slate-500 text-sm font-bold italic uppercase tracking-wider">

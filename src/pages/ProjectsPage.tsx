@@ -1,7 +1,9 @@
-import { motion } from "motion/react";
+"use client";
+
+import { motion } from "framer-motion";
 import { ChevronRight, Users, Rocket, Search } from "lucide-react";
 import { projectsData } from "../constants/projectsData";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function ProjectsPage() {
@@ -17,11 +19,11 @@ export default function ProjectsPage() {
   );
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <header className="mb-16">
+    <div className="bg-slate-50 min-h-screen pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24">
+      <div className="container-wide">
+        <header className="mb-12 sm:mb-16">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 italic leading-tight">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 mb-6 sm:mb-8 italic leading-tight">
               Dự án <br />{" "}
               <span className="text-blue-600 underline underline-offset-8 decoration-blue-200">
                 Sáng tạo HTEC
@@ -57,7 +59,7 @@ export default function ProjectsPage() {
               className="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all h-full flex flex-col"
             >
               <Link
-                to={`/projects/${project.id}`}
+                href={`/projects/${project.id}`}
                 className="block h-full flex flex-col"
               >
                 <div className="relative h-64 overflow-hidden">

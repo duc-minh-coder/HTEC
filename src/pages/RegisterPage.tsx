@@ -1,18 +1,20 @@
+"use client";
+
 import ClubInfo from '../components/register/ClubInfo';
 import RegistrationForm from '../components/register/RegistrationForm';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 export default function RegisterPage() {
   return (
-    <div className="bg-slate-50 pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-slate-50 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24">
+      <div className="container-wide">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="grid lg:grid-cols-2 gap-20 items-start"
+          className="grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-start"
         >
           {/* Left Column: Info */}
-          <div className="lg:sticky lg:top-32">
+          <div className="lg:sticky lg:top-28">
             <ClubInfo />
           </div>
 
