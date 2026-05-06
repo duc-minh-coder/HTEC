@@ -35,7 +35,7 @@ export default function NewsSection() {
             </h2>
             <h3 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 italic leading-[0.9]">
               Tin tức & <br />{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 underline decoration-blue-600/30">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 underline decoration-blue-600/30 pr-4">
                 Sự kiện mới
               </span>
             </h3>

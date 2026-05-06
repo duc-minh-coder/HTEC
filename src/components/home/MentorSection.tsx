@@ -93,7 +93,7 @@ export default function MentorSection() {
           <div className="max-w-3xl">
             <h2 className="text-blue-400 font-black uppercase tracking-[0.3em] text-xs mb-4 italic">ĐỘI NGŨ DẪN DẮT</h2>
             <h3 className="text-4xl md:text-6xl font-black text-white mb-6 leading-[1.1] italic">
-              Đồng hành cùng những <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Chuyên gia thực chiến</span>
+              Đồng hành cùng những <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 pr-4">Chuyên gia thực chiến</span>
             </h3>
             <p className="text-slate-400 text-lg md:text-xl italic max-w-2xl leading-relaxed">
               Labcom kết nối sinh viên với các chuyên gia, kỹ sư và nhà quản lý giàu kinh nghiệm từ các doanh nghiệp công nghệ hàng đầu.

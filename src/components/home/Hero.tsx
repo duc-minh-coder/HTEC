@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-16 sm:pb-20 md:pb-24 overflow-hidden bg-slate-50">
+    <section className="relative pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-16 sm:pb-20 md:pb-24 overflow-hidden bg-slate-50 mt-8 md:mt-0">
       {/* Background patterns - responsive sizing */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[400px] sm:w-[600px] md:w-[800px] h-[400px] sm:h-[600px] md:h-[800px] bg-blue-100/50 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[300px] sm:w-[500px] md:w-[600px] h-[300px] sm:h-[500px] md:h-[600px] bg-indigo-100/50 rounded-full blur-3xl pointer-events-none" />
